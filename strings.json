@@ -1,0 +1,155 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Hargassner",
+        "description": "Enter your Hargassner app credentials.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        }
+      },
+      "installation": {
+        "title": "Choose installation",
+        "description": "Multiple installations found. Choose one.",
+        "data": {
+          "installation_id": "Installation"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Incorrect email or password.",
+      "cannot_connect": "Cannot connect to the Hargassner API.",
+      "no_installations": "No installations found for this account.",
+      "unknown": "Unexpected error. Check the logs."
+    },
+    "abort": {
+      "already_configured": "This installation is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Hargassner options",
+        "data": {
+          "scan_interval": "Update interval (seconds)"
+        }
+      }
+    }
+  },
+  "services": {
+    "start_ignition": {
+      "name": "Start ignition",
+      "description": "Starts the boiler ignition sequence."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "heater_temp_current": {
+        "name": "{widget_name} Boiler temperature"
+      },
+      "heater_temp_target": {
+        "name": "{widget_name} Boiler target temperature"
+      },
+      "smoke_temperature": {
+        "name": "{widget_name} Flue gas temperature"
+      },
+      "outdoor_temperature": {
+        "name": "{widget_name} Outdoor temperature"
+      },
+      "outdoor_temperature_average": {
+        "name": "{widget_name} Average outdoor temperature"
+      },
+      "heater_state": {
+        "name": "{widget_name} Boiler state"
+      },
+      "heater_program": {
+        "name": "{widget_name} Program"
+      },
+      "fuel_stock": {
+        "name": "{widget_name} Fuel stock"
+      },
+      "efficiency": {
+        "name": "{widget_name} Efficiency"
+      },
+      "flow_temp_current": {
+        "name": "{widget_name} Flow temperature"
+      },
+      "flow_temp_target": {
+        "name": "{widget_name} Flow target temperature"
+      },
+      "room_temp_current": {
+        "name": "{widget_name} Room temperature"
+      },
+      "room_temp_target": {
+        "name": "{widget_name} Room target temperature"
+      },
+      "circuit_state": {
+        "name": "{widget_name} Circuit state"
+      },
+      "pump_active": {
+        "name": "{widget_name} Pump active"
+      },
+      "online_state": {
+        "name": "Connection state",
+        "state": {
+          "En ligne": "Online",
+          "Hors ligne": "Offline",
+          "Inconnu": "Unknown"
+        }
+      }
+    },
+    "number": {
+      "room_temperature_heating": {
+        "name": "{widget_name} Day temperature"
+      },
+      "room_temperature_reduction": {
+        "name": "{widget_name} Night temperature"
+      },
+      "deactivation_limit_heating": {
+        "name": "{widget_name} Heating cutoff temperature"
+      },
+      "deactivation_limit_reduction_day": {
+        "name": "{widget_name} Day setback cutoff temperature"
+      },
+      "deactivation_limit_reduction_night": {
+        "name": "{widget_name} Night setback cutoff temperature"
+      },
+      "steepness": {
+        "name": "{widget_name} Heating curve slope"
+      },
+      "fuel_stock": {
+        "name": "{widget_name} Fuel stock"
+      }
+    },
+    "switch": {
+      "weather_mode": {
+        "name": "{widget_name} Weather compensation mode"
+      },
+      "pool_heating": {
+        "name": "{widget_name} Pool heating"
+      }
+    },
+    "select": {
+      "mode": {
+        "name": "{widget_name} Circuit mode",
+        "state": {
+          "Arrêt": "Off",
+          "Automatique": "Automatic",
+          "Chauffage": "Heating",
+          "Réduit": "Setback",
+          "Pont réduit": "Temporary setback",
+          "Pont chauffage": "Temporary heating"
+        }
+      },
+      "pool_heating": {
+        "name": "{widget_name} Pool heating",
+        "state": {
+          "Arrêt": "Off",
+          "Marche": "On",
+          "Automatique": "Automatic"
+        }
+      }
+    }
+  }
+}
